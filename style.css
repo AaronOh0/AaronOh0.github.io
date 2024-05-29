@@ -7,7 +7,7 @@
 
 :root {
   --main-bg: rgb(14, 14, 14);
-  --text-base: rgb(19, 19, 19);
+  --text-base: rgb(148, 147, 147);
   --side-bg: rgb(45, 45, 45);
   --button-hover: rgb(69, 68, 68);
 }
@@ -39,6 +39,7 @@
   color: white;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
 
 .choiceWrapper {
@@ -52,23 +53,9 @@
   width: 50%;
   border: 2px solid var(--side-bg);
   background-color: var(--side-bg);
-
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: var(--text-base);
-}
-
-.infoValg {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: white;
-  width: 70%;
-  height: 20px;
-  font-size: 14px;
-  margin-left: 99px;
-  justify-content: center;
-  border: 1px solid black;
 }
 
 .button {
@@ -84,7 +71,7 @@
 }
 
 .choiceTimer {
-  height: 1px;
+  height: 0.5px;
   width: 100%;
   animation-name: stretch;
   animation-duration: 5s;
