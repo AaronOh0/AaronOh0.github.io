@@ -1,6 +1,7 @@
 window.onload = oppstart;
 
 let scene = 0;
+let currentTimer;
 
 function oppstart() {
   document.getElementById("leftChoice").onclick = function () {
@@ -59,6 +60,10 @@ function showScene() {
   const leftChoice = document.querySelector("#leftChoice");
   const rightChoice = document.querySelector("#rightChoice");
 
+  if (currentTimer) {
+    clearTimeout(currentTimer);
+  }
+
   if (scene == 0) {
     video.src = "";
     choiceInfo.innerHTML = "Start Video (trykk på en knapp)";
@@ -66,13 +71,13 @@ function showScene() {
     document.querySelector("#rightChoice").style.display = "none";
     document.querySelector("#leftChoice").style.width = "100%";
   } else if (scene == 1) {
-    video.src = "bilder/Start.mp4";
+    video.src = "bilder/StartLyd.mp4";
     choiceInfo.innerHTML = "Du har lyst på drikke: stjel eller betal!";
     leftChoice.innerHTML = "Stjel";
     rightChoice.innerHTML = "Betal";
     document.querySelector("#rightChoice").style.display = "block";
     document.querySelector("#leftChoice").style.width = "50%";
-    setTimeout(timer, 1500);
+    currentTimer = setTimeout(timer, 4900);
   } else if (scene == 2) {
     video.src = "bilder/stjele.mp4";
     choiceInfo.innerHTML = "";
@@ -80,13 +85,13 @@ function showScene() {
     rightChoice.innerHTML = "ta konsekvensene";
     document.querySelector("#leftChoice").style.display = "none";
     document.querySelector("#rightChoice").style.display = "none";
-    setTimeout(timerSteal, 26000);
+    currentTimer = setTimeout(timerSteal, 2000);
   } else if (scene == 3) {
     video.src = "bilder/betale.mp4";
     choiceInfo.innerHTML = "";
     document.querySelector("#leftChoice").style.display = "none";
     document.querySelector("#rightChoice").style.display = "none";
-    setTimeout(goodEnding, 20000);
+    currentTimer = setTimeout(goodEnding, 20000);
   } else if (scene == 4) {
     video.src = "bilder/lopTatt.mp4";
     choiceInfo.innerHTML = "";
@@ -94,13 +99,13 @@ function showScene() {
     rightChoice.innerHTML = "";
     document.querySelector("#leftChoice").style.display = "none";
     document.querySelector("#rightChoice").style.display = "none";
-    setTimeout(timerCaught, 6000);
+    currentTimer = setTimeout(timerCaught, 6000);
   } else if (scene == 5) {
     video.src = "bilder/dårligEnding2.mp4";
     choiceInfo.innerHTML = "";
     document.querySelector("#leftChoice").style.display = "none";
     document.querySelector("#rightChoice").style.display = "none";
-    setTimeout(timerWarning, 8000);
+    currentTimer = setTimeout(timerWarning, 8000);
   }
 }
 
@@ -109,11 +114,13 @@ function goodEnding() {
     "Gratulerer, du fikk den gode endingen!";
 }
 function timer() {
-  document.querySelector(".choiceTimer").style.display = "block";
+  const choiceTimer = document.querySelector(".choiceTimer");
+  choiceTimer.style.display = "block";
 }
 
 function timerSteal() {
-  document.querySelector(".choiceTimer").style.display = "block";
+  const choiceTimer = document.querySelector(".choiceTimer");
+  choiceTimer.style.display = "block";
   document.querySelector(".choiceInfo").innerHTML =
     "Du ble tatt: løp eller ta konsekvensene!";
   document.querySelector("#rightChoice").style.display = "block";
