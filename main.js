@@ -72,7 +72,8 @@ function showScene() {
     document.querySelector("#rightChoice").style.display = "none";
     document.querySelector("#leftChoice").style.width = "100%";
   } else if (scene == 1) {
-    video.src = "bilder/StartLyd.mp4";
+    video.src =
+      "https://www.youtube.com/embed/QoQ-zGO_Kt8?autoplay=1&rel=0&si=Sf0EOdIgR52ctVEr";
     choiceInfo.innerHTML = "Du har lyst på drikke: stjel eller betal!";
     leftChoice.innerHTML = "Stjel";
     rightChoice.innerHTML = "Betal";
@@ -80,7 +81,7 @@ function showScene() {
     document.querySelector("#leftChoice").style.width = "50%";
     currentTimer = setTimeout(timer, 4900);
   } else if (scene == 2) {
-    video.src = "bilder/stjele1.mp4";
+    video.src = "https://www.youtube.com/embed/1isDChSgHBw?autoplay=1&rel=0";
     choiceInfo.innerHTML = "";
     leftChoice.innerHTML = "Løp";
     rightChoice.innerHTML = "Ta konsekvensene";
@@ -88,13 +89,14 @@ function showScene() {
     document.querySelector("#rightChoice").style.display = "none";
     currentTimer = setTimeout(timerSteal, 28000);
   } else if (scene == 3) {
-    video.src = "bilder/betaleFerdig.mp4";
+    video.src = "https://www.youtube.com/embed/_L9V1ySKqQI?autoplay=1&rel=0";
     choiceInfo.innerHTML = "";
     document.querySelector("#leftChoice").style.display = "none";
     document.querySelector("#rightChoice").style.display = "none";
     currentTimer = setTimeout(goodEnding, 20000);
   } else if (scene == 4) {
-    video.src = "bilder/lopetatt1.mp4";
+    video.src =
+      "https://www.youtube.com/embed/nUeqWoJM5qo?autoplay=1&rel=0&si=lSzEE9zJPyhDtdNj";
     choiceInfo.innerHTML = "";
     leftChoice.innerHTML = "";
     rightChoice.innerHTML = "";
@@ -102,7 +104,8 @@ function showScene() {
     document.querySelector("#rightChoice").style.display = "none";
     currentTimer = setTimeout(timerCaught, 6000);
   } else if (scene == 5) {
-    video.src = "bilder/dårligEndingFerdig.mp4";
+    video.src =
+      "https://www.youtube.com/embed/VUNilHe7G0Q?autoplay=1&rel=0&si=MVqRtGu4Znv0PnK5";
     choiceInfo.innerHTML = "";
     document.querySelector("#leftChoice").style.display = "none";
     document.querySelector("#rightChoice").style.display = "none";
